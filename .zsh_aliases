@@ -1,0 +1,85 @@
+# -------------------------------------------------------------------
+# .zsh_aliases - Zsh Custom Aliases
+# -------------------------------------------------------------------
+
+# --- 基本コマンドの拡張 (Arch/Linux用) ---
+alias ls='ls --color=auto -v'
+alias ll='ls -hl --color=auto -v'
+alias la='ls -ahl --color=auto -v'
+alias l='ls -CF'
+
+# ディレクトリ移動のショートカット
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+
+# --- 安全のための設定 (うっかりミス防止) ---
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+
+# --- Pacman (Arch Linux Package Manager) ---
+alias pac='sudo pacman'
+alias pacins='sudo pacman -S'          # インストール
+alias pacupg='sudo pacman -Syu'        # システム全体の更新 (常に -Syu を使う)
+alias pacrem='sudo pacman -Rns'        # 設定ファイルと不要な依存関係を含めて削除
+alias pacs='pacman -Ss'                # リポジトリ内を検索
+alias pacq='pacman -Qs'                # インストール済みから検索
+alias pacinf='pacman -Si'              # パッケージの詳細情報を表示
+alias pacclean='sudo pacman -Rns $(pacman -Qdtq)' # 不要になった孤立したパッケージを削除
+
+# --- Git ショートカット ---
+alias g='git'
+alias gst='git status'
+alias gd='git diff'
+alias ga='git add'
+alias gc='git commit'
+alias gcm='git commit -m'
+alias gco='git checkout'
+alias gb='git branch'
+alias gp='git push'
+alias gpl='git pull'
+alias gl='git log --oneline --graph --decorate'
+
+# --- システム/便利ツール ---
+alias df='df -h'
+alias du='du -h'
+alias grep='grep --color=auto'
+alias history-all='history 1'
+alias reload='source ~/.zshrc'
+
+# --- グローバルエイリアス (コマンドの途中でも展開される) ---
+alias -g G='| grep'
+alias -g L='| less'
+alias -g W='| wc'
+alias -g H='| head'
+alias -g T='| tail'
+alias -g J='| jq'
+
+# --- サフィックスエイリアス (拡張子だけでアプリを起動) ---
+alias -s {md,txt,json,yml,yaml,conf}=emacs
+
+# --- Gist (anonymous/a9055e30f97bd19645c2) からの追加分 ---
+
+# 重要: sudo の後でもエイリアスを有効にする
+alias sudo='sudo '
+
+# 誤操作防止の強化
+alias chown='chown --preserve-root'
+alias chmod='chmod --preserve-root'
+alias chgrp='chgrp --preserve-root'
+
+# 便利ツール・表示の拡張
+alias df='df -h'                          # ディスク使用量を読みやすく
+alias du='du -ch'                         # 合計容量も表示
+alias mkdir='mkdir -p -v'                 # 中間ディレクトリ作成 & 詳細表示
+alias ping='ping -c 5'                    # 5回で自動停止
+alias dmesg='dmesg -HL'                   # カーネルログを色付き・ページャで表示
+alias hist='history | grep'               # 履歴から検索
+
+# プロセス検索
+alias pgg='ps -Af | grep'                 # 実行中のプロセスを検索
+
+# ls のバリエーション追加
+alias lz='ll -rS'                         # ファイルサイズ順
+alias lt='ll -rt'                         # 更新日時順 (新しい順)

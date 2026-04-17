@@ -5,6 +5,7 @@
 .password-store/
 .gemini/
 .claude/
+.claude.json
 .codex/
 .android/
 .pulse-cookie
