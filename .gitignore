@@ -1,0 +1,78 @@
+# --- 認証・秘密鍵 (絶対に公開禁止) ---
+.ssh/
+.gnupg/
+.pki/
+.password-store/
+.gemini/
+.claude/
+.codex/
+.android/
+.pulse-cookie
+*.pem
+*.key
+*.pub
+
+# --- ローカル専用設定 (マシン固有・秘密情報用) ---
+.zshrc.local
+.bashrc.local
+*.local
+.env
+.env.*
+
+# --- 履歴・ログ ---
+.*_history
+.zcompdump*
+.python_history
+.node_repl_history
+.histfile
+trace.log
+*.log
+
+# --- キャッシュ・一時ファイル ---
+.cache/
+.npm/
+.bundle/
+.ollama/
+.nv/
+.saves/
+.steam/
+.var/
+.vscode-oss/
+.steampath
+.steampid
+**/.tmp/
+**/tmp/
+*~
+*.bak
+*.swp
+
+# --- システム・GUI設定 ---
+.local/
+.config/Code - OSS/
+.config/chromium/
+.config/google-chrome/
+.config/mozilla/
+.config/dconf/
+.config/pulse/
+.config/xfce4/
+.config/gtk-*/
+.config/autostart/
+.config/systemd/
+.config/user-dirs.*
+.config/mimeapps.list
+.config/pavucontrol.ini
+
+# --- ツール固有の作業ディレクトリなど ---
+anythingllm/
+aur/
+bin/
+Downloads/
+Documents/
+Music/
+Pictures/
+Public/
+Videos/
+画像/
+Templates/
+Desktop/
+src/
