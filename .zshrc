@@ -395,3 +395,4 @@ export PAGER="less -R"
 
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
+alias backthen='/home/onoue/src/backthen/.venv/bin/python3 -m backthen.main'
